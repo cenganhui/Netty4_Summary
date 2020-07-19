@@ -7,6 +7,7 @@ import java.nio.channels.CompletionHandler;
 
 /**
  * AIO 客户端
+ *
  * @author Akuma
  * @date 2020/7/16 21:11
  */
@@ -22,7 +23,7 @@ public class AIOClient {
         client.connect(new InetSocketAddress(host, port), null, new CompletionHandler<Void, Object>() {
             @Override
             public void completed(Void result, Object attachment) {
-                try  {
+                try {
                     client.write(ByteBuffer.wrap("这是一条测试数据".getBytes())).get();
                     System.out.println("已发送至服务器");
                 } catch (Exception ex) {

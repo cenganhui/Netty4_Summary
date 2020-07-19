@@ -1,8 +1,9 @@
-package chapter4.bio.tomcat.servlet;
+package chapter4.netty.tomcat.servlet;
 
-import chapter4.bio.tomcat.http.GPRequest;
-import chapter4.bio.tomcat.http.GPResponse;
-import chapter4.bio.tomcat.http.GPServlet;
+
+import chapter4.netty.tomcat.http.GPRequest;
+import chapter4.netty.tomcat.http.GPResponse;
+import chapter4.netty.tomcat.http.GPServlet;
 
 /**
  * @author Akuma

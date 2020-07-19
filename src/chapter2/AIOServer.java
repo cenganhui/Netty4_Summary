@@ -13,6 +13,7 @@ import java.util.concurrent.Executors;
 /**
  * AIO 初体验
  * AIO 服务端
+ *
  * @author Akuma
  * @date 2020/7/16 20:58
  */
@@ -40,6 +41,7 @@ public class AIOServer {
 
             server.accept(null, new CompletionHandler<AsynchronousSocketChannel, Object>() {
                 final ByteBuffer buffer = ByteBuffer.allocate(1024);
+
                 @Override
                 public void completed(AsynchronousSocketChannel result, Object attachment) {
                     System.out.println("I/O操作成功，开始获取数据");

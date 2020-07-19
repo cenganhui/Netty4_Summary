@@ -1,4 +1,5 @@
-package chapter4.bio.tomcat.http;
+package chapter4.netty.tomcat.http;
+
 
 /**
  * GPServlet 抽象类

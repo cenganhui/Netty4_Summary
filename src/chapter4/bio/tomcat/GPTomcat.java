@@ -16,12 +16,13 @@ import java.util.Properties;
 /**
  * 基于传统 I/O 手写 Tomcat
  * GPTomcat 真正 Web 容器的实现逻辑，分为三个阶段：初始化阶段、服务就绪阶段、接受请求阶段
+ *
  * @author Akuma
  * @date 2020/7/18 18:10
  */
 public class GPTomcat {
 
-    private int port = 8080;
+    private int port = 8081;
 
     private ServerSocket server;
 
@@ -48,7 +49,7 @@ public class GPTomcat {
                     String url = webxml.getProperty(key);
                     String className = webxml.getProperty(servletName + ".className");
                     // 单实例，多线程
-                    GPServlet obj = (GPServlet)Class.forName(className).newInstance();
+                    GPServlet obj = (GPServlet) Class.forName(className).newInstance();
                     servletMapping.put(url, obj);
                 }
             }
@@ -79,6 +80,7 @@ public class GPTomcat {
 
     /**
      * 第三阶段：接受请求阶段，完成每一次请求的处理
+     *
      * @param client
      * @throws Exception
      */

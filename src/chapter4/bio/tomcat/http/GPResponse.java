@@ -4,6 +4,7 @@ import java.io.OutputStream;
 
 /**
  * GPResponse 按照 HTTP 规范从 Output 输出格式化的字符串
+ *
  * @author Akuma
  * @date 2020/7/18 18:06
  */
